@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <ImageView
+            android:id="@+id/imageview_country"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            tools:srcCompat="@tools:sample/avatars"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"/>
+
+    <TextView
+            android:id="@+id/textview_currencycode"
+            style="@style/textview_listitemheader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/imageview_country"
+            app:layout_constraintTop_toTopOf="@id/imageview_country"
+            tools:text="USD"
+            android:layout_marginStart="16dp"/>
+
+    <TextView
+            android:id="@+id/textview_currency"
+            style="@style/textview_listitemsubheader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/imageview_country"
+            app:layout_constraintTop_toBottomOf="@id/textview_currencycode"
+            tools:text="US Dollar"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp" />
+    
+    <EditText
+            style="@style/edittext_currency"
+            android:id="@+id/edittext_currency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="16dp"
+            android:enabled="false"
+            android:paddingStart="6dp"
+            android:paddingEnd="6dp"
+            tools:text="1183.06"
+            app:layout_constraintTop_toBottomOf="@id/textview_currencycode"
+            app:layout_constraintBottom_toTopOf="@id/textview_currency"
+            android:hint="@string/hint_currency" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
